@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -20,7 +20,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Nunito Sans', sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -131,25 +131,6 @@ body.dark-theme{
   display: inline-flex;
   align-items: center;
   column-gap: 1rem;
-}
-
-/*========== 
-Color changes in some parts of 
-the website, in dark theme 
-==========*/
-
-.dark-theme .steps__bg,
-.dark-theme .questions{
-  background-color: var(--first-color-dark);
-}
-
-.dark-theme .product__circle,
-.dark-theme .footer__subscribe{
-  background-color: var(--container-color);
-}
-
-.dark-theme .scroll-header{
-  box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, .3);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -308,6 +289,7 @@ the website, in dark theme
   row-gap: 2rem;
 }
 
+
 .home__img{
   width: 200px;
   justify-self: center;
@@ -319,56 +301,13 @@ the website, in dark theme
   margin-bottom: var(--mb-1);
 }
 .home__subtitle{
-  font-size: var(--h1-font-size);
-  line-height: 100%;
+  font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1);
 }
 
 .home__description{
-  margin-bottom: var(--mb-2-5);
-}
-
-.home__social{
-  position: absolute;
-  top: 2rem;
-  right: -1rem;
-  display: grid;
-  justify-items: center;
-  row-gap: 3.5rem;
-}
-
-.home__social-follow{
-  font-weight: var(--font-medium);
-  font-size: var(--smaller-font-size);
-  color: var(--first-color);
-  position: relative;
-  transform: rotate(90deg);
-}
-
-.home__social-follow::after{
-  content: '';
-  position: absolute;
-  width: 1rem;
-  height: 2px;
-  background-color: var(--first-color);
-  right: -45%;
-  top: 50%;
-}
-
-.home__social-links{
-  display: inline-flex;
-  flex-direction: column;
-  row-gap: .25rem;
-}
-
-.home__social-link{
-  font-size: 1rem;
-  color: var(--first-color);
-  transition: .3s;
-}
-
-.home__social-link:hover{
-  transform: translateX(.25rem);
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
 }
 
 /*=============== BUTTONS ===============*/
@@ -466,11 +405,6 @@ the website, in dark theme
 
 }
 
-/* For medium devices */
-@media screen and (min-width: 576px){
-
-}
-
 @media screen and (min-width: 767px){
   body{
     margin: 0;
@@ -478,7 +412,7 @@ the website, in dark theme
 
   .nav{
     height: calc(var(--header-height) + 1.5rem);
-    column-gap: 3rem;
+    column-gap: 2.5rem;
   }
   .nav__toggle,
   .nav__close{
@@ -490,6 +424,7 @@ the website, in dark theme
   }
   .nav__menu{
     margin-left: auto;
+    margin-right: auto;
   }
 
   .home__container{
@@ -521,6 +456,10 @@ the website, in dark theme
   .section__title,
   .section__title-center{
     font-size: var(--h1-font-size);
+  }
+
+  .nav{
+    column-gap: 0rem;
   }
 
   .home{
