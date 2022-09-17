@@ -347,6 +347,63 @@ body.dark-theme{
 .button--link:hover .button__icon{
   transform: translateX(.25rem);
 }
+/*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 2rem;
+  position: relative;
+}
+.contact__img{
+  width: 280px;
+  justify-self: center;
+}
+.contact__title{
+  margin-bottom: var(--mb-1);
+}
+.contact__description{
+  margin-bottom: var(--mb-2);
+}
+.contact__social{
+  position: absolute;
+  top: 2rem;
+  right: -1rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 9rem;
+}
+
+.contact__social-follow{
+  font-weight: var(--font-medium);
+  font-size: var(--smaller-font-size);
+  color: var(--first-color);
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.contact__social-follow::after{
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  background-color: var(--first-color);
+  right: -45%;
+  top: 50%;
+}
+
+.contact__social-links{
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: .25rem;
+}
+
+.contact__social-link{
+  font-size: 1rem;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+.contact__social-link:hover{
+  transform: translateX(.25rem);
+}
 
 /*=============== SCROLL UP ===============*/
 .scrollup{
@@ -426,20 +483,23 @@ body.dark-theme{
     margin-left: auto;
     margin-right: auto;
   }
-
-  .home__container{
+  .home__container,
+  .contact__container{
     grid-template-columns: repeat(2, 1fr);
   }
-  
   .home{
     padding: 10rem 0 5rem;
   }
-  .home__container{
+  .home__container,
+  .contact__container{
     align-items: center;
   }
   .home__img{
     width: 280px;
     order: 1;
+  }
+  .contact__social{
+    top: 30%;
   }
 }
 
@@ -475,7 +535,20 @@ body.dark-theme{
 }
 
 @media screen and (min-width: 1200px){
-
+  /* .contact__social{
+    right: -3rem;
+    row-gap: 4.5rem;
+  }
+  .contact__social-follow{
+    font-size: var(--small-font-size);
+  }
+  .contact__social-follow::after{
+    width: 1.5rem;
+    right: -60%;
+  }
+  .contact__social-link{
+    font-size: 1.15rem;
+  } */
   .scrollup{
     right: 3rem;
   }
