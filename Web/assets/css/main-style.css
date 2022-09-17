@@ -291,7 +291,7 @@ body.dark-theme{
 
 
 .home__img{
-  width: 200px;
+  width: 350px;
   justify-self: center;
 }
 
@@ -452,9 +452,8 @@ body.dark-theme{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
-
   .home__img{
-    width: 180px;
+    width: 250px;
   }
   .home__title{
     font-size: var(--h1-font-size);
@@ -495,7 +494,7 @@ body.dark-theme{
     align-items: center;
   }
   .home__img{
-    width: 280px;
+    width: 400px;
     order: 1;
   }
   .contact__social{
@@ -526,7 +525,7 @@ body.dark-theme{
     padding: 13rem 0 5rem;
   }
   .home__img{
-    width: 350px;
+    width: 450px;
   }
   .home__description{
     padding-right: 7rem;
