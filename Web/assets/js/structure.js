@@ -8,7 +8,6 @@ function Sim(sldrId) {
 		this.sldrRoot = document.querySelector('.view-slider')
 	};
 
-	// Carousel objects
 	this.sldrList = this.sldrRoot.querySelector('.view-slider-list');
 	this.sldrElements = this.sldrList.querySelectorAll('.view-slider-element');
 	this.sldrElemFirst = this.sldrList.querySelector('.view-slider-element');
@@ -16,7 +15,6 @@ function Sim(sldrId) {
 	this.rightArrow = this.sldrRoot.querySelector('div.view-slider-arrow-right');
 	this.indicatorDots = this.sldrRoot.querySelector('div.view-slider-dots');
 
-	// Initialization
 	this.options = Sim.defaults;
 	Sim.initialize(this)
 };
@@ -85,14 +83,11 @@ Sim.prototype.dotOff = function(num) {
 
 Sim.initialize = function(that) {
 
-	// Constants
 	that.elemCount = that.sldrElements.length; // Количество элементов
 
-	// Variables
 	that.currentElement = 0;
 	let bgTime = getTime();
 
-	// Functions
 	function getTime() {
 		return new Date().getTime();
 	};
@@ -105,7 +100,6 @@ Sim.initialize = function(that) {
 		}, that.options.interval)
 	};
 
-	// Start initialization
 	if(that.elemCount <= 1) {   // Отключить навигацию
 		that.options.auto = false; that.options.arrows = false; that.options.dots = false;
 		that.leftArrow.style.display = 'none'; that.rightArrow.style.display = 'none'
@@ -171,3 +165,17 @@ Sim.initialize = function(that) {
 };
 
 new Sim();
+
+const images = {
+	ammeter: "../assets/img/ammeter.jpg",
+	capacitor: "../assets/img/capacitor.jpg",
+	resistance: "../assets/img/resistance.jpg",
+	latr: "../assets/img/latr2.jpg",
+	oscilloscope: "../assets/img/oscilloscope.jpg",
+	torus: "../assets/img/torus.jpg",
+}
+
+list__elements.onclick = function (event)
+{
+    document.getElementsByClassName("main__elements__img")[0].innerHTML = '<img style="width: 500px;height:auto" src="'+images[event.target.id] +'"/>'
+}

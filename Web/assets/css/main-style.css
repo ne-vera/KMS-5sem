@@ -373,7 +373,7 @@ figcaption{
 .button--link:hover .button__icon{
   transform: translateX(.25rem);
 }
-/*=============== VIEWS ===============*/
+/*=============== STRUCTURE ===============*/
 .view-slider {
   max-width: 1000px;
   min-width: 320px;
@@ -456,6 +456,19 @@ span.view-dot {
   display: inline-block;
   background-color: #BBB;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.main__elements{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main__elements li{
+  list-style: disc;
+}
+
+.main__elements li:hover{
   cursor: pointer;
 }
 

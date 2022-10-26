@@ -30,42 +30,6 @@ lib.ssMetadata = [];
 p.nominalBounds = new cjs.Rectangle(0,0,4000,2250);
 
 
-(lib.VoltmBtn = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// timeline functions:
-	this.frame_2 = function() {
-		playSound("voltmeterwav");
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(2).call(this.frame_2).wait(2));
-
-	// btn
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#000000").ss(1,1,1).p("AqsnLIVZAAIAAOXI1ZAAg");
-	this.shape.setTransform(10.5,-6.95);
-
-	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#FF0000").s().p("AqsHMIAAuXIVZAAIAAOXg");
-	this.shape_1.setTransform(10.5,-6.95);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1},{t:this.shape}]},3).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-59,-53.9,139,94);
-
-
 (lib.TorusBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -79,7 +43,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_2 = function() {
-		playSound("toruswav");
+		playSound("torus");
 	}
 
 	// actions tween:
@@ -102,6 +66,42 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-27,-20.9,80,62);
 
 
+(lib.ResistanceBtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// timeline functions:
+	this.frame_2 = function() {
+		playSound("resistance");
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(2).call(this.frame_2).wait(2));
+
+	// btn
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#FFFFFF").ss(1,1,1).p("A02r8MAptAAAIAAX5MgptAAAg");
+	this.shape.setTransform(12.5,1.55);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#CCCCCC").s().p("A02L9IAA35MAptAAAIAAX5g");
+	this.shape_1.setTransform(12.5,1.55);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1},{t:this.shape}]},3).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-122,-75.9,269,155);
+
+
 (lib.OscilloBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -115,7 +115,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_2 = function() {
-		playSound("oscilloscopewav");
+		playSound("oscilloscope");
 	}
 
 	// actions tween:
@@ -151,7 +151,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_2 = function() {
-		playSound("latrwav");
+		playSound("latr");
 	}
 
 	// actions tween:
@@ -187,7 +187,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_2 = function() {
-		playSound("codencewav");
+		playSound("codence");
 	}
 
 	// actions tween:
@@ -223,7 +223,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_2 = function() {
-		playSound("ampermetrwav");
+		playSound("ampermetr");
 	}
 
 	// actions tween:
@@ -259,38 +259,34 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Слой_1
-	this.instance = new lib.OscilloBtn();
-	this.instance.setTransform(1035.75,449.75,1.8261,2.4274,14.9987,0,0,0.1,0.5);
-	new cjs.ButtonHelper(this.instance, 0, 1, 2, false, new lib.OscilloBtn(), 3);
+	this.instance = new lib.ResistanceBtn();
+	this.instance.setTransform(539.9,447.7,0.3982,0.6918);
+	new cjs.ButtonHelper(this.instance, 0, 1, 2, false, new lib.ResistanceBtn(), 3);
 
-	this.instance_1 = new lib.CapacitorBtn();
-	this.instance_1.setTransform(762.75,396.95,1,1.3589,0,2.5814,0,0.1,0.1);
-	new cjs.ButtonHelper(this.instance_1, 0, 1, 2, false, new lib.CapacitorBtn(), 3);
+	this.instance_1 = new lib.OscilloBtn();
+	this.instance_1.setTransform(1035.75,449.75,1.8261,2.4274,14.9987,0,0,0.1,0.5);
+	new cjs.ButtonHelper(this.instance_1, 0, 1, 2, false, new lib.OscilloBtn(), 3);
 
-	this.instance_2 = new lib.LatrBTn();
-	this.instance_2.setTransform(530.95,441.15,1,1.1053);
-	new cjs.ButtonHelper(this.instance_2, 0, 1, 2, false, new lib.LatrBTn(), 3);
+	this.instance_2 = new lib.CapacitorBtn();
+	this.instance_2.setTransform(762.75,396.95,1,1.3589,0,2.5814,0,0.1,0.1);
+	new cjs.ButtonHelper(this.instance_2, 0, 1, 2, false, new lib.CapacitorBtn(), 3);
 
-	this.instance_3 = new lib.TorusBtn();
-	this.instance_3.setTransform(419.85,445.6,1.1577,0.9778,0,0,0,0.1,0.1);
-	new cjs.ButtonHelper(this.instance_3, 0, 1, 2, false, new lib.TorusBtn(), 3);
+	this.instance_3 = new lib.LatrBTn();
+	this.instance_3.setTransform(129.5,457.8,1.1187,1.7162,0,0,0,0.1,0.1);
+	new cjs.ButtonHelper(this.instance_3, 0, 1, 2, false, new lib.LatrBTn(), 3);
 
-	this.instance_4 = new lib.VoltmBtn();
-	this.instance_4.setTransform(148.55,432.75,0.7796,1.0896,0,43.9208,0);
-	new cjs.ButtonHelper(this.instance_4, 0, 1, 2, false, new lib.VoltmBtn(), 3);
+	this.instance_4 = new lib.TorusBtn();
+	this.instance_4.setTransform(419.85,445.6,1.1577,0.9778,0,0,0,0.1,0.1);
+	new cjs.ButtonHelper(this.instance_4, 0, 1, 2, false, new lib.TorusBtn(), 3);
 
-	this.instance_5 = new lib.VoltmBtn();
-	this.instance_5.setTransform(137.8,511.85,0.8339,0.9257,0,-9.3187,0,0.1,0.1);
-	new cjs.ButtonHelper(this.instance_5, 0, 1, 2, false, new lib.VoltmBtn(), 3);
+	this.instance_5 = new lib.AmperBtn();
+	this.instance_5.setTransform(299.05,495.6,0.463,0.6281,0,15.828,0,0.4,0.4);
+	new cjs.ButtonHelper(this.instance_5, 0, 1, 2, false, new lib.AmperBtn(), 3);
 
-	this.instance_6 = new lib.AmperBtn();
-	this.instance_6.setTransform(299.05,495.6,0.463,0.6281,0,15.828,0,0.4,0.4);
-	new cjs.ButtonHelper(this.instance_6, 0, 1, 2, false, new lib.AmperBtn(), 3);
+	this.instance_6 = new lib.setup();
+	this.instance_6.setTransform(-56,-76,0.3538,0.3538);
 
-	this.instance_7 = new lib.setup();
-	this.instance_7.setTransform(-56,-76,0.3538,0.3538);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
@@ -305,13 +301,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/setup.jpeg?1666025645685", id:"setup"},
-		{src:"sounds/ampermetrwav.mp3?1666025645685", id:"ampermetrwav"},
-		{src:"sounds/codencewav.mp3?1666025645685", id:"codencewav"},
-		{src:"sounds/latrwav.mp3?1666025645685", id:"latrwav"},
-		{src:"sounds/oscilloscopewav.mp3?1666025645685", id:"oscilloscopewav"},
-		{src:"sounds/toruswav.mp3?1666025645685", id:"toruswav"},
-		{src:"sounds/voltmeterwav.mp3?1666025645685", id:"voltmeterwav"}
+		{src:"images/setup.jpeg", id:"setup"},
+		{src:"sounds/ampermetr.mp3", id:"ampermetr"},
+		{src:"sounds/codence.mp3", id:"codence"},
+		{src:"sounds/latr.mp3", id:"latr"},
+		{src:"sounds/oscilloscope.mp3", id:"oscilloscope"},
+		{src:"sounds/resistance.mp3", id:"resistance"},
+		{src:"sounds/torus.mp3", id:"torus"}
 	],
 	preloads: []
 };
