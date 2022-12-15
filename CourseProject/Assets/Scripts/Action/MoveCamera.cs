@@ -84,7 +84,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(3.898211f, -0.7f, 28f);
+            needPosition = new Vector3(3.898211f, 0.7f, 29f);
             needRotaton = Quaternion.Euler(20f, -180f, 0f);
         }
     }
@@ -96,7 +96,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(2.897823f, -0.7f, 26.5f);
+            needPosition = new Vector3(3.110283f, 0.3f, 27.00826f);
             needRotaton = Quaternion.Euler(90f, -180f, 0f);
         }
     }
@@ -108,7 +108,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(-1.5f, -1.338804f, 27.5f);
+            needPosition = new Vector3(-1.016491f, -0.4371765f, 28.28f);
             needRotaton = Quaternion.Euler(0f, -180f, 0f);
         }
     }
@@ -120,7 +120,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(-3.689054f, -1.185127f, 27.5f);
+            needPosition = new Vector3(-3.2f, -0f, 28f);
             needRotaton = Quaternion.Euler(0f, -180f, 0f);
         }
     }
@@ -132,7 +132,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(0.7148081f, -0.2f, 26.2f);
+            needPosition = new Vector3(0.9348078f, 1f, 26.8f);
             needRotaton = Quaternion.Euler(90f, -180f, 0f);
         }
     }
@@ -144,7 +144,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(1.803064f, 0f, 26.2f);
+            needPosition = new Vector3(2.023064f, 0.3f, 26.69924f);
             needRotaton = Quaternion.Euler(90f, -180f, 0f);
         }
     }
@@ -158,7 +158,7 @@ public class MoveCamera : MonoBehaviour
             move = true;
             startPosition = transform.position;
             startRotation = transform.rotation;
-            needPosition = new Vector3(0.8444268f, -0.91f, 33.87f);
+            needPosition = new Vector3(0.8444268f, 0.3f, 33.87f);
             needRotaton = Quaternion.Euler(0, 180, 0);
         }
     }

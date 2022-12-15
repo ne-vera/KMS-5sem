@@ -18,6 +18,13 @@ public class Menu : MonoBehaviour
     public Material redWood;
     public Material copper;
 
+    public string defaultText;
+
+    public void Start()
+    {
+        defaultText = message.text;
+    }
+
     public void InfoAmmeter()
     {
         message.text = "Амперметр";
@@ -49,7 +56,7 @@ public class Menu : MonoBehaviour
     }
     public void OnExit()
     {  //  МЕТОД, ВЫЗЫВАЕМЫЙ ПОЛЬЗОВАТЕЛЕМ ПРИ УХОДЕ КУРСОРА МЫШИ С КНОПКИ 
-        message.text = "Симулятор предназначен для проведения лабораторного практикума в виртуальном режиме с установкой, представленной на экране компьютера";
+        message.text = defaultText;
     }
 
     #region Изменение цвета амперметра

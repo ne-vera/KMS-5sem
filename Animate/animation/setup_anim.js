@@ -1584,12 +1584,7 @@ if (reversed == null) { reversed = false; }
 	// timeline functions:
 	this.frame_0 = function() {
 		this.stop();
-		this.PlayBtn.addEventListener("click", fl_play(this));
-		function fl_play()
-		{
-			this.play();
-			createjs.Sound.play();
-		}
+		this.PlayBtn.addEventListener("click", ()=>this.play());
 		this.StopBtn.addEventListener("click", ()=>this.stop());
 		this.RestartBtn.addEventListener("click", ()=>this.gotoAndStop(0));
 		this.stop();
@@ -2055,8 +2050,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/setup_anim_atlas_1.png?1667026422913", id:"setup_anim_atlas_1"},
-		{src:"sounds/KMS_2.mp3?1667026423003", id:"KMS_2"}
+		{src:"images/setup_anim_atlas_1.png?1671015947557", id:"setup_anim_atlas_1"},
+		{src:"sounds/KMS_2.mp3?1671015947631", id:"KMS_2"}
 	],
 	preloads: []
 };
