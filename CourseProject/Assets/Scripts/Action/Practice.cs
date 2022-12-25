@@ -25,10 +25,11 @@ public class Practice : MonoBehaviour
     public void EnableOscilloscope()
     {
         message.text = "Включите осциллограф.";
-        if (StateVariables.isOscilloscopeEnabled)
-        {
-            message.text = "Регуляторами на передней панели выведите световую точку в центр экрана";
-        }
+    }
+
+    public void CenterPoint()
+    {
+         message.text = "Регуляторами на передней панели выведите световую точку в центр экрана";
     }
     //3 задание
     public void SetLATRZero()
@@ -59,7 +60,7 @@ public class Practice : MonoBehaviour
 
         if (StateVariables.isOscilloscopeEnabled)
         {
-            SetLATRZero();
+            CenterPoint();
         }
 
         if (StateVariables.isLATRZero)

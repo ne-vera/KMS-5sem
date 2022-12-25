@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class EnableOscilloscope : MonoBehaviour, IPointerClickHandler
 {
     public GameObject OscilloscopeScreen;
+    public GameObject OscilloscopeLight;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (StateVariables.is1A)
@@ -14,6 +15,7 @@ public class EnableOscilloscope : MonoBehaviour, IPointerClickHandler
         }
         StateVariables.isOscilloscopeEnabled = true;
         OscilloscopeScreen.GetComponent<Renderer>().material.color = new Color(1, 1, 1);
+        OscilloscopeLight.GetComponent<Renderer>().material.color = new Color(1, 0, 0);
         StateVariables.cycle = 1;
     }
 

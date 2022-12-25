@@ -19,8 +19,8 @@ public class CreateCurve : MonoBehaviour
         math = gameObject.AddComponent<BGCcMath>();
         line = gameObject.AddComponent<BGCcVisualizationLineRenderer>();
         line.UpdateAtStart = true;
-        lineRenderer.startWidth = 0.005f;
-        lineRenderer.endWidth = 0.005f;
+        lineRenderer.startWidth = 0.015f;
+        lineRenderer.endWidth = 0.015f;
         // line.SplitMode = BGCcVisualizationLineRenderer.
 
         // //print calculated values
@@ -32,18 +32,23 @@ public class CreateCurve : MonoBehaviour
         // Vector3 p2 = new Vector3(-3.218645f, 0.2847095f, 26.60277f);
         // Vector3 p3 = new Vector3(-3.18538f, 0.1774014f, 26.60277f);
         // Hysteresis(p0, p1, p2, p3);
-        
+       
+    }
+
+    void FixedUpdate()
+    {
+        if (StateVariables.cycle == 1)
+        {
+            Vector3 p0 = new Vector3(-3.18f, 0.179f, 26.60277f);
+            CreatePoint(p0);
+            StateVariables.cycle = 0;  
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //
-        if (StateVariables.cycle == 1)
-        {
-            Vector3 p0 = new Vector3(-3.18f, 0.179f, 26.60277f);
-            Hysteresis(p0, p0, p0, p0);
-        }
+    
         if (StateVariables.cycle == 2)
         {
             // Vector3 p0 = new Vector3(-3.093883f, 0.08185977f, 26.60277f);
@@ -51,6 +56,20 @@ public class CreateCurve : MonoBehaviour
             // Vector3 p2 = new Vector3(-3.218645f, 0.2847095f, 26.60277f);
             // Vector3 p3 = new Vector3(-3.18538f, 0.1774014f, 26.60277f);
             // Hysteresis(p0, p1, p2, p3);
+            lineRenderer.startWidth = 0.005f;
+            lineRenderer.endWidth = 0.005f;
+            curve[0].ControlFirstLocal = new Vector3(-0.01f, -0.01f, 0);
+            curve[0].ControlSecondLocal = new Vector3(-0.01f,- 0.01f, 0);
+
+            curve[1].ControlFirstLocal = new Vector3(0.01f, 0.01f, 0);
+            curve[1].ControlSecondLocal = new Vector3(0.01f, 0.01f, 0);
+
+            curve[2].ControlFirstLocal = new Vector3(0.01f, 0.01f, 0);
+            curve[2].ControlSecondLocal = new Vector3(0.01f, 0.01f, 0);
+
+            curve[3].ControlFirstLocal = new Vector3(-0.01f, 0.01f, 0);
+            curve[3].ControlSecondLocal = new Vector3(-0.01f, 0.01f, 0);
+            
             curve[0].PositionLocal = Vector3.Lerp(curve[0].PositionLocal, new Vector3(-3.093883f, 0.08185977f, 26.60277f), 0.02f);
             curve[1].PositionLocal = Vector3.Lerp(curve[1].PositionLocal, new Vector3(-3.154724f, 0.2308939f,  26.60277f), 0.02f);
             curve[2].PositionLocal = Vector3.Lerp(curve[2].PositionLocal, new Vector3(-3.218645f, 0.2847095f, 26.60277f), 0.02f);
@@ -68,6 +87,19 @@ public class CreateCurve : MonoBehaviour
             new Vector3(0.01f, 0.01f, 0), new Vector3(0.01f, 0.01f, 0)));
         curve.AddPoint(new BGCurvePoint(curve, p3, BGCurvePoint.ControlTypeEnum.BezierIndependant,
             new Vector3(-0.01f, 0.01f, 0), new Vector3(-0.01f, 0.01f, 0)));
+        curve.Closed = true;
+    }
+
+    public void CreatePoint(Vector3 p0)
+    {
+         curve.AddPoint(new BGCurvePoint(curve, p0, BGCurvePoint.ControlTypeEnum.BezierIndependant,
+            new Vector3(0.01f, 0.01f, 0), new Vector3(-0.01f, 0.01f, 0)));
+        curve.AddPoint(new BGCurvePoint(curve, p0, BGCurvePoint.ControlTypeEnum.BezierIndependant,
+            new Vector3(0.01f, 0.01f, 0), new Vector3(-0.01f, 0.01f, 0)));
+        curve.AddPoint(new BGCurvePoint(curve, p0, BGCurvePoint.ControlTypeEnum.BezierIndependant,
+            new Vector3(0.01f, 0.01f, 0), new Vector3(-0.01f, 0.01f, 0)));
+        curve.AddPoint(new BGCurvePoint(curve, p0, BGCurvePoint.ControlTypeEnum.BezierIndependant,
+            new Vector3(0.01f, 0.01f, 0), new Vector3(-0.01f, 0.01f, 0)));
         curve.Closed = true;
     }
 }
