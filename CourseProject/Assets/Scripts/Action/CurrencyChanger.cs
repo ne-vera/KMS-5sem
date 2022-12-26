@@ -8,11 +8,10 @@ public class CurrencyChanger :  MonoBehaviour, IPointerClickHandler
     Animator animator;
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (StateVariables.canChangeCurrency)
+        if (StateVariables.step == 1)
         {
             animator.SetTrigger("ammeterRotate");
-            StateVariables.is1A = true;
-            StateVariables.canChangeCurrency = false;
+            StateVariables.step = 2;
         }
     }
 

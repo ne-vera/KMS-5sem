@@ -7,16 +7,23 @@ public class EnableOscilloscope : MonoBehaviour, IPointerClickHandler
 {
     public GameObject OscilloscopeScreen;
     public GameObject OscilloscopeLight;
+    public Camera MainCamera;
+    public GameObject CurveObj;
+
+    public GameObject HorizontalBtn;
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (StateVariables.is1A)
+        if (StateVariables.step == 2)
         {
             gameObject.transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.Euler(40f, 0f, 0f), 0f);
         }
-        StateVariables.isOscilloscopeEnabled = true;
+        StateVariables.step = 3;
         OscilloscopeScreen.GetComponent<Renderer>().material.color = new Color(1, 1, 1);
         OscilloscopeLight.GetComponent<Renderer>().material.color = new Color(1, 0, 0);
-        StateVariables.cycle = 1;
+
+        HorizontalBtn.AddComponent<CenterCurve>();
+        HorizontalBtn.GetComponent<CenterCurve>().CurveObj = this.CurveObj;
+        HorizontalBtn.GetComponent<CenterCurve>().MainCamera = this.MainCamera;
     }
 
     // Start is called before the first frame update

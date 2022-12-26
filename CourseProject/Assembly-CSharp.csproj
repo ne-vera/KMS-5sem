@@ -88,12 +88,16 @@
      <Compile Include="Assets\Scripts\Action\EnableOscilloscope.cs" />
      <Compile Include="Assets\Scripts\Action\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Action\Plugger.cs" />
-     <Compile Include="Assets\Scripts\Action\Practice.cs" />
      <Compile Include="Assets\Scripts\Action\RotateLATR.cs" />
+     <Compile Include="Assets\Scripts\Action\SetResistance.cs" />
      <Compile Include="Assets\Scripts\Action\StateVariables.cs" />
+     <Compile Include="Assets\Scripts\Action\TaskFlow.cs" />
+     <Compile Include="Assets\Scripts\Hysteresis\CenterCurve.cs" />
      <Compile Include="Assets\Scripts\Hysteresis\CreateCurve.cs" />
+     <Compile Include="Assets\Scripts\UI\ActivateDeactiavte.cs" />
      <Compile Include="Assets\Scripts\UI\Dropdown.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
+     <Compile Include="Assets\Scripts\UI\TableScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

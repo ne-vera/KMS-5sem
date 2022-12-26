@@ -85,6 +85,7 @@
      <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveSettings.cs" />
      <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGReflectionAdapter.cs" />
      <Compile Include="Assets\Curve.cs" />
+     <Compile Include="Assets\MoveCurveHorizontally.cs" />
      <None Include="Assets\BansheeGz\BGCurve\readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\2019.4.39f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

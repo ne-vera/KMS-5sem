@@ -27,8 +27,11 @@ public class MoveCamera : MonoBehaviour
             float y = Input.GetAxis("Vertical"); 
             if (x != 0 || y != 0)
             {
-            Vector3 newPos = transform.position + (transform.TransformDirection(new Vector3(x, 0, 0)) + Vector3.up * y) / rotationSensivity;
-            if (ControlDistance(Vector3.Distance(newPos, target.position))) transform.position = newPos;
+                Vector3 newPos = transform.position + (transform.TransformDirection(new Vector3(x, 0, 0)) + Vector3.up * y) / rotationSensivity;
+                if (ControlDistance(Vector3.Distance(newPos, target.position))) 
+                {
+                    transform.position = newPos;
+                }
             }
         }
         // Приближение камеры колёсиком мыши.

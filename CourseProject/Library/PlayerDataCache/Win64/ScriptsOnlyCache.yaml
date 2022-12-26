@@ -22,10 +22,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -39,9 +37,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -107,9 +107,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12936}
     - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
       Script: {instanceID: 13142}
     - Class: 114
       Script: {instanceID: 13168}
+    - Class: 114
+      Script: {instanceID: 13192}
     - Class: 114
       Script: {instanceID: 13196}
     - Class: 114
@@ -261,7 +265,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: ccf04d12456cb3b1452b5305bd24f683
+      Hash: 0ed54392be0af74dd813e0c8fcf10844
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnableOscilloscope
