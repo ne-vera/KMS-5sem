@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\Action\Plugger.cs" />
      <Compile Include="Assets\Scripts\Action\RotateLATR.cs" />
      <Compile Include="Assets\Scripts\Action\SetResistance.cs" />
+     <Compile Include="Assets\Scripts\Action\SetVoltage.cs" />
      <Compile Include="Assets\Scripts\Action\StateVariables.cs" />
      <Compile Include="Assets\Scripts\Action\TaskFlow.cs" />
      <Compile Include="Assets\Scripts\Hysteresis\CenterCurve.cs" />

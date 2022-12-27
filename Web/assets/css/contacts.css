@@ -1,0 +1,85 @@
+/*=============== CONTACT ===============*/
+.contact__container{
+    row-gap: 2rem;
+    position: relative;
+  }
+  .contact__img{
+    width: 180px;
+    justify-self: center;
+  }
+  .contact__title{
+    margin-bottom: var(--mb-1);
+  }
+  .contact__description{
+    margin-bottom: var(--mb-2);
+  }
+  .contact__social{
+    position: absolute;
+    top: 2rem;
+    right: -1rem;
+    display: grid;
+    justify-items: center;
+    row-gap: 9rem;
+  }
+  
+  .contact__social-follow{
+    font-weight: var(--font-medium);
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    position: relative;
+    transform: rotate(90deg);
+  }
+  
+  .contact__social-follow::after{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2px;
+    background-color: var(--first-color);
+    right: -45%;
+    top: 50%;
+  }
+  
+  .contact__social-links{
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: .25rem;
+  }
+  
+  .contact__social-link{
+    font-size: 1rem;
+    color: var(--first-color);
+    transition: .3s;
+  }
+  
+  .contact__social-link:hover{
+    transform: translateX(.25rem);
+  }
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 576px){
+  .contact__img{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 767px){
+  .contact__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact__container{
+    align-items: center;
+  }
+  .contact__social{
+    top: 30%;
+  }
+  .contact__img{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px){ 
+  .contact__img{
+    width: 300px;
+  }
+}

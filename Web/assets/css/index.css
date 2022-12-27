@@ -1,0 +1,67 @@
+/*=============== HOME ===============*/
+.home{
+    padding: 3.5rem 0 2rem;
+  }
+  
+  .home__container{
+    position: relative;
+    row-gap: 2rem;
+  }
+  .home__img{
+    width: 350px;
+    justify-self: center;
+  }
+  
+  .home__title{
+    font-size: var(--big-font-size);
+    line-height: 140%;
+    margin-bottom: var(--mb-1);
+  }
+  .home__subtitle{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1);
+  }
+  
+  .home__description{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+  }
+
+  /*=============== BREAKPOINTS ===============*/
+  @media screen and (max-width: 320px){
+    .home__img{
+      width: 250px;
+    }
+    .home__title{
+      font-size: var(--h1-font-size);
+    }
+  }
+  
+  @media screen and (min-width: 767px){
+    .home__container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .home{
+      padding: 10rem 0 5rem;
+    }
+    .home__container{
+      align-items: center;
+    }
+    .home__img{
+      width: 400px;
+      order: 1;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 992px){ 
+    .home{
+      padding: 13rem 0 5rem;
+    }
+    .home__img{
+      width: 450px;
+    }
+    .home__description{
+      padding-right: 7rem;
+    }
+  }

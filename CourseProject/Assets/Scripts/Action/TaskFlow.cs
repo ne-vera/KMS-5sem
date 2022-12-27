@@ -7,6 +7,7 @@ public class TaskFlow : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text message;
+    public GameObject InputPanel;
     // Start is called before the first frame update
 
     public void OnExit()
@@ -46,15 +47,19 @@ public class TaskFlow : MonoBehaviour
                 break;
             case 8:
                 message.text = "Запишите значение R в таблицу";
+                InputPanel.SetActive(true);
                 break;
             case 9:
                 message.text ="и емкости С из диапазона 0,4−0,8 мкФ на магазине емкостей";
+                InputPanel.SetActive(false);
                 break;
             case 10:
                 message.text = "Запишите значение C в таблицу";
+                InputPanel.SetActive(true);
                 break;
             case 11:
                 message.text = "Снова выставьте рукоятку ЛАТРа в исходное положение (ток равен нулю).";
+                InputPanel.SetActive(false);
                 break;
             case 12:
                 message.text = $"Поворотом рукоятки ЛАТРа установите по амперметру ток {StateVariables.currency} А";

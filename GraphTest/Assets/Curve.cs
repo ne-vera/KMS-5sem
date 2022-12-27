@@ -22,25 +22,85 @@ public class Curve : MonoBehaviour
         math = gameObject.AddComponent<BGCcMath>();
         line = gameObject.AddComponent<BGCcVisualizationLineRenderer>();
         line.UpdateAtStart = true;
-        lineRenderer.startWidth = 0.01f;
-        lineRenderer.endWidth = 0.01f;
+        lineRenderer.startWidth = 0.005f;
+        lineRenderer.endWidth = 0.005f;
 
+        //??
         // Vector3 p0 = new Vector3(-3.093883f, 0.08185977f, 26.60277f);
-        Vector3 p1 = new Vector3(-3.154724f, 0.2308939f,  26.60277f);
+        // Vector3 p1 = new Vector3(-3.154724f, 0.2308939f,  26.60277f);
         // Vector3 p2 = new Vector3(-3.218645f, 0.2847095f, 26.60277f);
-        Vector3 p3 = new Vector3(-3.18538f, 0.1774014f, 26.60277f);
+        // Vector3 p3 = new Vector3(-3.18538f, 0.1774014f, 26.60277f);
 
-    //0.6    
-    Vector3 p0 = new Vector3(-3f, 0.093f, 26.6356f);
-    // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.6356f);
-    Vector3 p2 = new Vector3(-3.29f, 0.25f, 26.6356f);
-    // Vector3 p3 = new Vector3(-3.15f, 0.13f, 26.60277f);
+        //0.10
+        // Vector3 p0 = new Vector3(-3.125f, 0.14f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.142f, 0.18f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.18f, 0.22f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.16f, 0.168f, 26.60234f); 
+
+        //0.15
+        // Vector3 p0 = new Vector3(-3.11f, 0.13f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.20f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.19f, 0.22f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.16f, 0.168f, 26.60234f);
+
+        //0.20
+        // Vector3 p0 = new Vector3(-3.1f, 0.13f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.19f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.205f, 0.22f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.16f, 0.168f, 26.60234f);
+
+        //0.25
+        // Vector3 p0 = new Vector3(-3.09f, 0.125f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.2f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.21f, 0.23f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.155f, 26.60234f);
+        
+        //0.30
+        // Vector3 p0 = new Vector3(-3.067f, 0.115f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.23f, 0.24f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.135f, 26.60234f);
+
+        //0.35
+        // Vector3 p0 = new Vector3(-3.06f, 0.11f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.237f, 0.245f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.135f, 26.60234f);
+
+        //0.40
+        // Vector3 p0 = new Vector3(-3.05f, 0.105f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.247f, 0.25f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.135f, 26.60234f);
+
+        //0.45
+        // Vector3 p0 = new Vector3(-3.035f, 0.105f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.262f, 0.25f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.135f, 26.60234f);
+
+        //0.50
+        // Vector3 p0 = new Vector3(-3.03f, 0.105f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.267f, 0.255f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.13f, 26.60234f);
+
+        //0.55
+        // Vector3 p0 = new Vector3(-3.015f, 0.10f, 26.60234f);
+        // Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.603f);
+        // Vector3 p2 = new Vector3(-3.282f, 0.26f, 26.60234f);
+        // Vector3 p3 = new Vector3(-3.15f, 0.13f, 26.60234f);
+
+        //0.6    
+        Vector3 p0 = new Vector3(-3.005f, 0.085f, 26.6356f);
+        Vector3 p1 = new Vector3(-3.15f, 0.22f, 26.6356f);
+        Vector3 p2 = new Vector3(-3.29f, 0.26f, 26.6356f);
+        Vector3 p3 = new Vector3(-3.15f, 0.13f, 26.60277f);
         Hysteresis(p0, p1, p2, p3);
         // Vector3 p0 = new Vector3(-3.149841f, 0.1808128f, 26.60277f);
         // Vector3 p0 = new Vector3(-3.18f, 0.2f, 26.60277f);
         // CreatePoint(p0);
 
-       
     }
 
     // Update is called once per frame

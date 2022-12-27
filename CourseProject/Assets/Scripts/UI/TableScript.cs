@@ -12,7 +12,9 @@ public class TableScript : MonoBehaviour
     [SerializeField]
     TMP_InputField textInput;
 
+    [SerializeField]
     TMP_Text R;
+    [SerializeField]
     TMP_Text C;
     
     GameObject FirstRow;
@@ -30,6 +32,14 @@ public class TableScript : MonoBehaviour
     {
         
     }
+    public void WriteValue()
+    {
+        // WriteCell(R);
+        // StateVariables.step = 9;
+        
+        // WriteCell(C);
+        // StateVariables.step = 11;
+    }
 
     public void Clear()
     {
@@ -39,4 +49,29 @@ public class TableScript : MonoBehaviour
             FieldsToInput.GetComponent<TMP_Text>().text = "-";
         }
     }
+
+    void WriteCell(TMP_Text cell)
+    {
+        if (cell.text == "-")
+        {
+            cell.text = textInput.text.ToString();
+        }
+    }
+
+    void ComputeH(TMP_Text X, TMP_Text H)
+    {
+        if(X.text != "-")
+        {
+            H.text = ((2900 * 100 * 0.5f * float.Parse(X.text)) / (2 * 3.14f * 7 * 9000)).ToString();
+        } 
+    }
+    
+    void ComputeB(TMP_Text Y, TMP_Text B)
+    {
+        if(Y.text != "-")
+        {
+            B.text = ((float.Parse(Y.text) * 9 * 4f) / (3 * 3)).ToString();
+        } 
+    }
+    
 }

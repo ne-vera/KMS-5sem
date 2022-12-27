@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
      <!--=============== CSS ===============-->
     <link rel="stylesheet" href="../assets/css/main-style.css">
+    <link rel="stylesheet" href="../assets/css/theory.css">
     <!--=============== REMIX ICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Теоретические сведения</title>
@@ -294,10 +295,35 @@
                     </a> 
                 </div>
             </section>
+                    <!--==================== MODAL ====================-->
+            <section class ="modal section container">
+                <button id="btn-open-modal">?</button>
+                    <div id="wrapper-modal">
+                        <div id="overlay"></div>
+
+                        <div id="modal-window">
+                            <h6 class="modal-window-heading">Задайте свой вопрос</h6>
+                            <div class = "input-modal">
+                                <input class="question" id="question" type="text" placeholder="Например, что такое гистерезис?">
+                                <!-- <img src="../img/microphone.png" id="MicIcon" onclick="speech()"> -->
+                                <i class="ri-mic-2-line nav__logo-icon" onclick="speech()"></i>
+                            </div>          
+                            <div class="question-button">Узнать ответ</div>
+
+                            <div class="wrapper-answer">
+                                <h6 class="answer-heading">Ответ</h6>
+                                <div class="answer">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
         </main>
      <!--=============== MAIN JS ===============-->
      <script src="../assets/js/main.js"></script>
      <script src="../assets/js/theory.js"></script>
      <script src="../assets/js/knowledgeBase.js"></script>
+     <script src="../assets/js/modal.js"></script>
 </body>
 </html>

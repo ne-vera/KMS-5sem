@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class SetResistance : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
     Animator animator;
     void Start()
     {
