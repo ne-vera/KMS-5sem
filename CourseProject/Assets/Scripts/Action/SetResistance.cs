@@ -10,8 +10,7 @@ public class SetResistance : MonoBehaviour, IPointerClickHandler
     {
         animator = gameObject.GetComponent<Animator>();
     }
-
-
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         if (StateVariables.step == 7)

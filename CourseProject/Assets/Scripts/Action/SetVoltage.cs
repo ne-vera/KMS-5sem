@@ -14,12 +14,11 @@ public class SetVoltage : MonoBehaviour, IPointerClickHandler
 
 
     public void OnPointerClick(PointerEventData eventData)
-    {
-        
-        if (StateVariables.step == 9)
+    {     
+        if (StateVariables.step == 8)
         {
             animator.SetTrigger("SetVoltage");
-            StateVariables.step = 10;
+            StateVariables.step = 9;
         }
     }
 }

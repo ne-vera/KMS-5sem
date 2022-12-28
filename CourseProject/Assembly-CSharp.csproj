@@ -99,6 +99,8 @@
      <Compile Include="Assets\Scripts\UI\Dropdown.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\TableScript.cs" />
+     <Compile Include="Assets\Scripts\UI\XCellScript.cs" />
+     <Compile Include="Assets\Scripts\UI\YCellScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
